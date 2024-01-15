@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+
+</head>
+<body class="main">
+<header class="header">
+    <th:block th:replace="~{main/header :: header}"></th:block>
+</header>
+
+<div class="body" style="width: 100%">
+    <th:block th:replace="~{${main_content}}"></th:block>
+</div>
+
+<footer class="footer">
+    <th:block th:class="footer" th:replace="~{main/footer :: footer}"></th:block>
+</footer>
+</body>
+</html>

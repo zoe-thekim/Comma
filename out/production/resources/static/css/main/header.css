@@ -1,0 +1,35 @@
+.header-wrapper {
+    display: flex;
+    padding: 30px 0 30px 0;
+    align-items: center;
+    text-decoration-line: none;
+}
+.header-wrapper .header-logo{
+
+    font-weight: bold;
+    padding: 0 20px 0 20px;
+}
+.header-wrapper .header-logo a{
+    text-decoration-line: none;
+    font-family: 'Luckiest Guy';
+    color: white;
+    font-size: 40px ;
+}
+.header-wrapper .navbar{
+    margin: 0 20px 0 auto;
+}
+.header-wrapper .navbar ul{
+     display: flex;
+ }
+.header-wrapper .navbar li {
+    list-style-type: none;
+    float: left;
+    padding: 0 5px 0 5px;
+}
+.header-wrapper .navbar li a{
+    text-decoration-line: none;
+    color: white;
+    font-family: "winco", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}

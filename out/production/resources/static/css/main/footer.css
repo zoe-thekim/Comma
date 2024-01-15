@@ -1,0 +1,24 @@
+.footer-body {
+    width: 100%;
+    background: #FDF5E8;
+    font-family: "winco", sans-serif;
+}
+
+.footer-one .footer-info{
+    margin: 30px 0;
+}
+
+.footer-one .footer-info ul{
+    list-style-type: none;
+}
+
+.footer-one .footer-info-title  {
+    text-align: center;
+}
+.footer-two ul{
+    list-style-type: none;
+}
+.footer-three ul {
+    list-style-type: none;
+    margin: 30px;
+}
