@@ -15,16 +15,16 @@
     text-align: center;
     /*color: #fff;*/
 }
-.login-form{
+.login_form{
     display: grid;
 }
-.login-form input {
+.login_form input {
     margin: 10px 50px;
     padding: 10px 20px;
     border-radius: 10px;
 }
 
-.login-form button {
+.login_form button {
     margin: 10px 50px;
     padding: 10px 20px;
     border-radius: 10px;

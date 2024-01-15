@@ -1,4 +1,4 @@
-package com.zoe.pawse.Entity;
+package com.zoe.Comma.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,7 +16,8 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int USER_NO;
-    private String USER_ID;
+    @Column(name = "USER_ID")
+    private String userId;
     private String USER_PWD;
     private String NAME;
     private String PHONE;

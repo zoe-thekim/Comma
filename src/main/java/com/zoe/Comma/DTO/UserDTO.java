@@ -1,4 +1,4 @@
-package com.zoe.pawse.DTO;
+package com.zoe.Comma.DTO;
 
 import jakarta.persistence.Id;
 import lombok.Getter;

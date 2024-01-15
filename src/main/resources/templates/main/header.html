@@ -18,10 +18,11 @@
             <nav>
                 <ul>
                     <li><a href="/">Booking</a></li>
-                    <li><a href="/user/login">Login</a></li>
-                    <li><a href="/user/join">Join</a></li>
                     <li><a href="/">MyPage</a></li> <!-- 로그인 한 경우에만 보이도록 -->
                     <li><a href="/">User</a></li>   <!-- 관리자만 접근 가능 -->
+                    <li th:if="${session['USER_ID'] == null}"><a href="/user/join">Join</a></li>
+                    <li th:if="${session['USER_ID'] == null}"><a href="/user/login">Login</a></li>
+                    <li th:if="${session['USER_ID'] != null}"><a href="/user/login">Logout</a></li>
                 </ul>
             </nav>
         </div>

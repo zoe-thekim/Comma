@@ -1,4 +1,4 @@
-package com.zoe.pawse;
+package com.zoe.Comma;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -7,17 +7,25 @@
 
 </head>
 <body>
-<div class="login row">
-    <div class="login-container col-md-4 offset-md-4">
+<div class="login row" th:if="${session['USER_ID'] == null}">
+    <div class="login-container col-md-4 offset-md-4" >
         <h4>LOGIN</h4>
-        <form action="#" class="login-form">
-            <input type="text" placeholder="ID" />
-            <input type="password" placeholder="PASSWORD" />
+        <form method="post" action="/user/login" class="login_form">
+            <input type="text" name="USER_ID" placeholder="ID" />
+            <input type="password" name="USER_PWD" placeholder="PASSWORD" />
             <button type="submit">LOGIN</button>
         </form>
     </div>
+</div>
 
-
+<div class="login-container col-md-4 offset-md-4" th:if="${session['USER_ID'] != null}">
+    <h4>LOGOUT</h4>
+    <form method="post" action="/user/logout" class="login_form">
+        <button type="submit">LOGOUT</button>
+    </form>
 </div>
 </body>
+<script>
+
+</script>
 </html>

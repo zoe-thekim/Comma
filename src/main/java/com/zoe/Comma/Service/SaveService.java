@@ -1,17 +1,16 @@
-package com.zoe.pawse.Service;
+package com.zoe.Comma.Service;
 
-import com.zoe.pawse.DTO.UserDTO;
-import com.zoe.pawse.Entity.UserEntity;
-import jdk.swing.interop.SwingInterOpUtils;
+import com.zoe.Comma.DTO.UserDTO;
+import com.zoe.Comma.Entity.UserEntity;
 
 public interface SaveService {
     Long register(UserDTO userDTO);
 
 //    UserEntity에 UserDTO를 넣어주는 과정
+    // 진짜 저장은 UserService에서
     default UserEntity dtoToEntity(UserDTO userDTO){
         UserEntity userEntity = UserEntity.builder()
-                .USER_NO(userDTO.getUSER_NO())
-                .USER_ID(userDTO.getUSER_ID())
+                .userId(userDTO.getUSER_ID())
                 .USER_PWD(userDTO.getUSER_PWD())
                 .NAME(userDTO.getNAME())
                 .PHONE(userDTO.getPHONE())
