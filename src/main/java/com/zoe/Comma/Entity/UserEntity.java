@@ -15,13 +15,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int USER_NO;
-    @Column(name = "USER_ID")
-    private String userId;
-    private String USER_PWD;
+    private int USERNO;
+    @Column(name = "USERID")
+    private String USERID;
+    private String USERPWD;
+    private String USERLEVEL;
     private String NAME;
     private String PHONE;
     private String EMAIL;
     private String ADDRESS;
-    private String POST_CODE;
+    private String POSTCODE;
 }

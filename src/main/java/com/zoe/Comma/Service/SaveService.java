@@ -10,13 +10,13 @@ public interface SaveService {
     // 진짜 저장은 UserService에서
     default UserEntity dtoToEntity(UserDTO userDTO){
         UserEntity userEntity = UserEntity.builder()
-                .userId(userDTO.getUSER_ID())
-                .USER_PWD(userDTO.getUSER_PWD())
+                .USERID(userDTO.getUSERID())
+                .USERPWD(userDTO.getUSERPWD())
                 .NAME(userDTO.getNAME())
                 .PHONE(userDTO.getPHONE())
                 .EMAIL(userDTO.getEMAIL())
                 .ADDRESS(userDTO.getADDRESS())
-                .POST_CODE(userDTO.getPOST_CODE())
+                .POSTCODE(userDTO.getPOSTCODE())
                 .build();
         return userEntity;
     }

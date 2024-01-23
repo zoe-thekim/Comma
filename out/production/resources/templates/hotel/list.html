@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Title</title>
+</head>
+<body>
+    <div style="background: aliceblue;
+        margin:20px; border-radius: 20px ; padding: 20px;
+        display:inline-flex;"
+        th:each="hotel : ${hotelList}">
+        <td th:each="img : ${hotel.img}">
+            <img style="width: 300px; margin-right: 15px"
+                th:src="@{${img.IMG1}}" />
+        </td>
+        <div>
+            <p th:text="'Name : '+${hotel.NAME}"></p>
+            <p th:text="'Location : '+${hotel.LOCATION}"></p>
+            <div></div>
+            <a th:href="@{'/hotel/detail?HOTELNO=' + ${hotel.HOTELNO}}">
+            <button style="float: right; border-radius: 30px; border:none; background: coral   "
+            >CHECK</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

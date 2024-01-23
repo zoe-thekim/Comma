@@ -1,0 +1,31 @@
+
+.login {
+    width: 100%;
+    padding: 30px 10px;
+    font-family: "winco", sans-serif;
+}
+.login-container {
+    /*background: #26577C;*/
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.login h4{
+    font-family: 'Luckiest Guy';
+    text-align: center;
+    /*color: #fff;*/
+}
+.login_form{
+    display: grid;
+}
+.login_form input {
+    margin: 10px 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.login_form button {
+    margin: 10px 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}

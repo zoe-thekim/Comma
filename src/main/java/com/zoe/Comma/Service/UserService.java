@@ -15,13 +15,24 @@ public class UserService {
 
     public boolean LoginCheck(String userId, String userPwd)
     {
-        UserEntity userEntity = userRepository.findByUserId(userId);
+        UserEntity userEntity = userRepository.findByUSERID(userId);
 
-        if(userEntity != null && userEntity.getUSER_PWD().equals(userPwd)){
+        if(userEntity != null && userEntity.getUSERPWD().equals(userPwd)){
             return  true; // 인증 성공
         }
         else{
             return false;
+        }
+    }
+    public UserEntity GetUserInfo(String userId, String userPwd)
+    {
+        UserEntity userEntity = userRepository.findByUSERID(userId);
+
+        if(userEntity != null && userEntity.getUSERPWD().equals(userPwd)){
+            return  userEntity; // 인증 성공
+        }
+        else{
+            return null;
         }
     }
 }

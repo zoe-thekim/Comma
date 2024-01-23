@@ -32,10 +32,12 @@ public class UserController {
     public String user_login(HttpSession session, Model model,
                              @RequestParam String USER_ID, @RequestParam String USER_PWD)
     {
+        UserEntity userEntity = userService.GetUserInfo(USER_ID, USER_PWD);
         // 로그인 시도
-        if(userService.LoginCheck(USER_ID, USER_PWD))
+        if(userEntity != null)
         {
             session.setAttribute("USER_ID", USER_ID);
+            session.setAttribute("USER_LEVEL", userEntity.getUSERLEVEL());
             model.addAttribute("main_content", "main/home");
         }
         else{
@@ -52,7 +54,7 @@ public class UserController {
         HttpSession session = request.getSession();
         session.invalidate();
         model.addAttribute("main_content", "main/home");
-        return "redirect:/";
+        return "main";
     }
 
     // 회원가입
@@ -66,12 +68,9 @@ public class UserController {
     @PostMapping("/user/save")
     public String user_save(HttpServletRequest request, UserEntity user
                             , @RequestParam String userId, @RequestParam String userPwd){
-    // UserDTO에서 Entity에 넣어준 값을 바로 넣을 수 있음!
-
-        HttpSession session = request.getSession();
-//        session.setAttribute("USER_ID", userId);
-//        session.setAttribute("USER_PWD", userPwd);
+        // UserDTO에서 Entity에 넣어준 값을 바로 넣을 수 있음!
         userRepository.save(user);
+
         return "redirect:/user/login";
     }
 }

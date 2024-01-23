@@ -8,13 +8,14 @@ import lombok.Setter;
 @Setter
 public class UserDTO {
     @Id
-    public int USER_NO;
-    public String USER_ID;
-    public String USER_PWD;
+    public int USERNO;
+    public String USERID;
+    public String USERPWD;
+    public String USERLEVEL;
     public String NAME;
     public String PHONE;
     public String EMAIL;
     public String ADDRESS;
-    public String POST_CODE;
+    public String POSTCODE;
 
 }
